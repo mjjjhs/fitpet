@@ -4,13 +4,13 @@ import CommonStyle from './styles/Common';
 import Header from './components/Header';
 
 function App() {
-    return (
-        <React.Fragment>
-            <Header />
-            <style jsx>{ResetStyle}</style>
-            <style jsx>{CommonStyle}</style>
-        </React.Fragment>
-    );
+  return (
+    <React.Fragment>
+      <Header />
+      <style jsx>{ResetStyle}</style>
+      <style jsx>{CommonStyle}</style>
+    </React.Fragment>
+  );
 }
 
 
