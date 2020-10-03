@@ -8,6 +8,7 @@ export default css`
     height: 184px;
     margin-top: 20px;
     text-align: center;
+    background-color: #ddd;
 
     img {
       display: block;
