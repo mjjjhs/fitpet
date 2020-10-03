@@ -1,6 +1,6 @@
 import css from 'styled-jsx/css';
 export default css.global`
-/* reset */
+  /* reset */
   * {box-sizing: border-box}
   body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,textarea,p,blockquote,th,td,input,select,textarea,button {margin:0;padding:0}
   fieldset,img {border:0 none}
@@ -25,5 +25,4 @@ export default css.global`
   .tbl {border-collapse:collapse;border-spacing:0}
   .clear_g {display:block;overflow:visible;width:auto;clear:both;*zoom:1}
   .clear_g:after {display:block;visibility:hidden;height:0;font-size:0;clear:both;content:''}
-  .txt_bar {font-size:12px;color:#b6b6b6}
 `;
