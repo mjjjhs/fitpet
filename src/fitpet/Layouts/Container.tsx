@@ -6,7 +6,7 @@ import ContainerStyle from "../Styles/ContainerStyle";
 function Container() {
   return (
     <div className="container">
-      <Header />
+      <Header isNext={true} isPrev={true}/>
       <Content />
       <style jsx>{ContainerStyle}</style>
     </div>
