@@ -5,4 +5,4 @@ logs/
 dist/
 .env
 .env.*
-
+.history
