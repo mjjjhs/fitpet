@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="55" height="20" viewBox="0 0 55 20">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <text fill="#333" font-family="Gilroy-ExtraBold, Gilroy" font-size="15" font-weight="600" transform="translate(-91 -18) translate(91 18)">
+                    <tspan x=".48" y="14">Next</tspan>
+                </text>
+                <g stroke="#333" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                    <g>
+                        <path d="M0.828 1L0.828 5 4.828 5" transform="translate(-91 -18) translate(91 18) translate(35) matrix(-1 0 0 1 15 7) rotate(45 2.828 3)"/>
+                        <path d="M0 3L9 3" transform="translate(-91 -18) translate(91 18) translate(35) matrix(-1 0 0 1 15 7)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

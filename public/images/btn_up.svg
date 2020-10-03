@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+    <defs>
+        <linearGradient id="9tbjual9la" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#4566AD"/>
+            <stop offset="100%" stop-color="#2B51A2"/>
+        </linearGradient>
+        <linearGradient id="dnvgt6mo5b" x1="50%" x2="50%" y1="0%" y2="100%">
+            <stop offset="0%" stop-color="#FFF" stop-opacity=".4"/>
+            <stop offset="100%" stop-color="#FFF" stop-opacity="0"/>
+        </linearGradient>
+        <filter id="f8agpimv6c">
+            <feColorMatrix in="SourceGraphic" values="0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 0 1.000000 0 0 0 1.000000 0"/>
+        </filter>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g transform="translate(2 2)">
+            <rect width="27" height="27" x=".5" y=".5" fill="#2B51A2" stroke="url(#9tbjual9la)" rx="7"/>
+            <rect width="26" height="26" x="1" y="1" fill="url(#dnvgt6mo5b)" rx="6"/>
+            <g stroke-linecap="round" stroke-linejoin="round" filter="url(#f8agpimv6c)">
+                <g stroke="#333" stroke-width="4">
+                    <path d="M2 2L2 10 10 10" transform="rotate(90 6 14) rotate(45 6 6)"/>
+                    <path d="M1.5 6L12.5 6" transform="rotate(90 6 14)"/>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
