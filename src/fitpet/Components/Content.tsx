@@ -40,10 +40,16 @@ function Content() {
           </ul>
         </div>
         <div className="cont type2">
-          <h3>2</h3>
+          <h3>기본보다 큰녀석</h3>
         </div>
         <div className="cont type3">
-          <h3>2</h3>
+          <h3>물컵</h3>
+        </div>
+        <div className="cont type4">
+          <h3>ox</h3>
+        </div>
+        <div className="cont type5">
+          <h3>range</h3>
         </div>
       </Slider>
       <style jsx>{ContentStyle}</style>

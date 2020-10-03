@@ -8,7 +8,7 @@ export default css.global`
   blockquote, q {quotes:none}
   blockquote:before, blockquote:after,q:before, q:after {content:'';content:none}
   input,select,textarea,button {font-size:100%;vertical-align:middle}
-  button {border:0 none;background-color:transparent;cursor:pointer}
+  button {border:0 none;outline:0;background-color:transparent;cursor:pointer}
   table {border-collapse:collapse;border-spacing:0}
   body {-webkit-text-size-adjust:none}
   input[type='text'],input[type='password'],input[type='submit'],input[type='search'] {-webkit-appearance:none; border-radius:0}
