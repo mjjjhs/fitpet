@@ -1,8 +1,28 @@
 import * as React from "react";
 import ContentStyle from "../Styles/ContentStyle";
 import Slider from "react-slick";
+import { Slider as CompoundSlider, Rail, Handles, Tracks, Ticks } from 'react-compound-slider';
+import {CSSProperties, useState} from "react";
+import { SliderRail, Handle, Track } from './CompoundSlider'
 
-const settings = {
+const sliderStyle: CSSProperties = {
+  position: 'relative',
+  width: '100%'
+};
+
+const defaultValues = [2, 15];
+
+const settings: {
+  className: string,
+  arrows: boolean,
+  dots: boolean,
+  infinite: boolean,
+  speed: number,
+  slidesToShow: number,
+  centerMode: boolean,
+  centerPadding: string,
+  adaptiveHeight: boolean
+} = {
   className: "slider_box",
   arrows: false,
   dots: false,
@@ -15,13 +35,35 @@ const settings = {
 };
 
 function Content() {
+  const [compoundSliderOpts, setCompoundSlideruOpts] = useState<{
+    domain: [any, any],
+    values: number[],
+    update: number[],
+    reversed: boolean
+  }>({
+    domain: [defaultValues[0], defaultValues[1]],
+    values: defaultValues.slice(),
+    update: defaultValues.slice(),
+    reversed: false,
+  });
+
+  const onChangeCompundSlider = (values): void => setCompoundSlideruOpts({
+    ...compoundSliderOpts,
+    values: [...values]
+  });
+
+  const onUpdateCompundSlider = (values): void => setCompoundSlideruOpts({
+    ...compoundSliderOpts,
+    update: [...values]
+  });
+
   return (
     <div className="content">
       <section className="feature_dr">
         <img src="images/dr_01.png"
-            srcSet="images/dr_01@2x.png 320w,
+             srcSet="images/dr_01@2x.png 320w,
                     images/dr_01@3x.png 768w"
-            sizes="(max-width: 319px) 192px,
+             sizes="(max-width: 319px) 192px,
                     (max-width: 767px) 256px,
                     512px"
         />
@@ -107,7 +149,49 @@ function Content() {
           </ul>
         </div>
         <div className="cont type5">
-          <h3>range</h3>
+          <CompoundSlider
+            mode={2}
+            step={1}
+            domain={compoundSliderOpts?.domain}
+            reversed={compoundSliderOpts?.reversed}
+            rootStyle={sliderStyle}
+            onUpdate={onUpdateCompundSlider}
+            onChange={onChangeCompundSlider}
+            values={compoundSliderOpts?.values}
+          >
+            <Rail>
+              {({ getRailProps }) => <SliderRail getRailProps={getRailProps} />}
+            </Rail>
+            <Handles>
+              {({ handles, getHandleProps }) => (
+                <div className="slider-handles">
+                  {handles.map(handle => (
+                    <Handle
+                      key={handle.id}
+                      handle={handle}
+                      domain={compoundSliderOpts?.domain}
+                      getHandleProps={getHandleProps}
+                    />
+                  ))}
+                </div>
+              )}
+            </Handles>
+            <Tracks left={false} right={false}>
+              {({ tracks, getTrackProps }) => (
+                <div className="slider-tracks">
+                  {tracks.map(({ id, source, target }) => (
+                    <Track
+                      key={id}
+                      source={source}
+                      target={target}
+                      getTrackProps={getTrackProps}
+                    />
+                  ))}
+                </div>
+              )}
+            </Tracks>
+          </CompoundSlider>
+          <h2 className="price-period">{compoundSliderOpts?.update[0]}만원 ~ {compoundSliderOpts?.update[1]}만원</h2>
         </div>
       </Slider>
       <style jsx>{ContentStyle}</style>
