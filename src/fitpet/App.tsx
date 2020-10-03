@@ -1,12 +1,12 @@
 import * as React from 'react';
-import ResetStyle from './styles/Reset';
-import CommonStyle from './styles/Common';
-import Header from './components/Header';
+import Container from './Layouts/Container';
+import ResetStyle from './Styles/Reset';
+import CommonStyle from './Styles/Common';
 
 function App() {
   return (
     <React.Fragment>
-      <Header />
+      <Container />
       <style jsx>{ResetStyle}</style>
       <style jsx>{CommonStyle}</style>
     </React.Fragment>

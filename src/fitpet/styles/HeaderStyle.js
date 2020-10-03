@@ -6,6 +6,7 @@ export default css`
       height: 100px;
       background: red;
       border:solid 1px red;
+      font-family: 'Gilroy';
     }
   }
 `;
