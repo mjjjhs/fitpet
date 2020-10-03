@@ -1,6 +1,4 @@
 import css from 'styled-jsx/css';
-import './scss/_reset.scss';
-import './scss/_variable.scss';
 export default css`
   .feature_dr {
     width: 100%;
