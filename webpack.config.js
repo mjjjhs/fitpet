@@ -4,11 +4,11 @@ const PnpWebpackPlugin = require('pnp-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 
 const isDevelopment = process.env.NODE_ENV || 'development';
 
-module.exports = (env) => {
+module.exports = () => {
     let optimization = {
         splitChunks: {
             cacheGroups: {
@@ -194,7 +194,19 @@ module.exports = (env) => {
                 filename: isDevelopment === 'development' ? '[name].css' : '[name].[contenthash].css',
                 chunkFilename: isDevelopment === 'development' ? '[id].css' : '[id].[contenthash].css'
             }),
-            new CleanWebpackPlugin()
+            new CleanWebpackPlugin(),
+            new CopyPlugin({
+                patterns: [
+                    {
+                      from: 'src/fitpet/Assets/Images',
+                      to: 'images'
+                    },
+                    {
+                      from: 'src/fitpet/Assets/Fonts',
+                      to: 'fonts'
+                    }
+                ],
+            }),
         ],
         optimization
     };

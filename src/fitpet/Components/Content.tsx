@@ -2,15 +2,6 @@ import * as React from "react";
 import ContentStyle from "../Styles/ContentStyle";
 import Slider from "react-slick";
 
-/*
-<img 
-            src="/images/dr_01.png"
-            className="layer"
-          />
-srcSet="/images/dr_01@2x.png,
-                    /images/dr_01@3x.png"
-*/
-
 const settings = {
   className: "slider slider_q variable-width",
   arrows: false,
@@ -27,7 +18,7 @@ function Content() {
   return (
     <div className="content">
       <section className="feature_dr">
-        선생님이미지
+        <img src="images/dr_01.png" />
       </section>
       <Slider {...settings}>
         <div className="cont type1">
