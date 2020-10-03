@@ -177,7 +177,7 @@ module.exports = (env) => {
             //     ENV: JSON.stringify(env)
             // }),
             new HtmlWebPackPlugin({
-                title: isDevelopment === 'development' ? 'Dev' : 'Prod',
+                title: isDevelopment === 'development' ? 'FitPet Dev' : 'FitPet',
                 minify: true,
                 favicon: '',
                 meta: {
