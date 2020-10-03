@@ -1,9 +1,7 @@
 import css from 'styled-jsx/css';
+import './scss/_reset.scss';
+import './scss/_variable.scss';
 export default css`
-  /* @import '_variable.scss'; */
-  .content {
-    
-  }
   .feature_dr {
     width: 100%;
     /* height: 184px; */
@@ -15,5 +13,4 @@ export default css`
       margin: 0 auto;
     }
   }
-  
 `;

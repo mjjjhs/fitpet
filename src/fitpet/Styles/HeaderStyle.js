@@ -13,19 +13,28 @@ export default css`
       height: 24px;
       object-fit: contain;
     }
+
     .wrap_btn {
       height: 20px;
       display: flex;
+      justify-content: flex-end;
     }
-    .btn_prev, .btn_next {
+
+    .btn_prev,
+    .btn_next {
       width: 55px;
       height: 100%;
       object-fit: contain;
-      background: url(images/btn_prev.svg);
+      background: 0 0 no-repeat;
+      background-size: 55px auto;
+    }
+
+    .btn_prev {
+      background-image: url(images/btn_prev@3x.png);
     }
     .btn_next {
       margin-left: 16px;
-      background: url(images/btn_next.svg);
+      background-image: url(images/btn_next@3x.png);
     }
   }
   
