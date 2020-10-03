@@ -4,15 +4,12 @@ export default css.global`
   @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
   @import url('fonts/Gilroy-ExtraBold.otf');
   @import url('fonts/Gilroy-Light.otf');
-
   $primary: #2b51a2 !default;
   $grey: #999 !default;
-
   @mixin wh($num) {
     width: $num;
     height: $num;
   }
-
   .inp_check {
     display: none;
     & + label {
@@ -23,7 +20,6 @@ export default css.global`
       border-radius: 10px;
       background-color: #f7f7fb;
       cursor: pointer;
-
       span {
         font-size: 14px;
         font-weight: bold;
@@ -35,12 +31,10 @@ export default css.global`
     }
     
   }
-
   .slider_box {
     .slick-slide {
       padding: 20px 6px 40px;
     }
-
     .cont {
       min-height: 368px;
       padding: 20px;
@@ -49,19 +43,16 @@ export default css.global`
       box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
       line-height: 24px;
     }
-
     .head {
       display: flex;
       justify-content: space-between;
       align-item: center;
       margin-bottom: 12px;
     }
-
     .tit {
       margin-top: 4px;
       margin-bottom: 12px;
     }
-
     em {
       display: block;
       height: 20px;
@@ -70,7 +61,6 @@ export default css.global`
       font-weight: 800;
       color: $primary;
     }
-
     .page {
       font-family: 'Gilroy';
       font-size: 15px;
@@ -84,7 +74,6 @@ export default css.global`
       font-wieght: bold;
       word-break: keep-all;
     }
-
     .notice {
       margin-top: 8px;
       font-size: 12px;
@@ -92,7 +81,6 @@ export default css.global`
       line-height: 16px;
       color: $grey;
     }
-
     
   }
 `;
