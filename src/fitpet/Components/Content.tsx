@@ -18,7 +18,7 @@ function Content() {
   return (
     <div className="content">
       <section className="feature_dr">
-        선생님이미지
+        <img src="images/dr_01.png" />
       </section>
       <Slider {...settings}>
         <div className="cont type1">
