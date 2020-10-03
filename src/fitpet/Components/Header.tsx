@@ -4,7 +4,7 @@ import HeaderStyle from "../Styles/HeaderStyle";
 function Header() {
   return (
     <div className="header">
-      <h1 className="logo">FitPet</h1>
+      <img src="images/logo_fitpet.svg" className="logo" />
       <div className="wrap_btn">
         <button type="button" className="btn_next">
           Next
