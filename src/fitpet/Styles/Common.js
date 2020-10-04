@@ -76,6 +76,8 @@ $grey: #999 !default;
     .inp_check,
     .inp_radio {
       + label {
+        align-item: center;
+        padding-right: 40px;
         span {
           font-size: 14px;
         }
@@ -90,7 +92,8 @@ $grey: #999 !default;
     .inp_radio {
       + label {
         @include py(22px);
-
+        align-item: center;
+        padding-right: 40px;
         span {
           font-size: 15px;
         }

@@ -93,6 +93,55 @@ function Content() {
                 <span>소화계통</span>
               </label>
             </li>
+            <li>
+              <input type="checkbox" id="inp_check_q01_03" className="inp_check" />
+              <label htmlFor="inp_check_q01_03">
+                <img src="images/articular-system@3x.png" className="img_type1" />
+                <span>관절계통</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="inp_check_q01_04" className="inp_check" />
+              <label htmlFor="inp_check_q01_04">
+                <img src="images/ophthalmic-system@3x.png" className="img_type1" />
+                <span>안과계통</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="inp_check_q01_05" className="inp_check" />
+              <label htmlFor="inp_check_q01_05">
+                <img src="images/respiratory-system@3x.png" className="img_type1" />
+                <span>호흡기계통</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="inp_check_q01_06" className="inp_check" />
+              <label htmlFor="inp_check_q01_06">
+                <img src="images/urinary-system@3x.png" className="img_type1" />
+                <span>비뇨계통</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="inp_check_q01_07" className="inp_check" />
+              <label htmlFor="inp_check_q01_07">
+                <img src="images/nervous-system@3x.png" className="img_type1" />
+                <span>순환계통</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="inp_check_q01_08" className="inp_check" />
+              <label htmlFor="inp_check_q01_08">
+                <img src="images/oral-system@3x.png" className="img_type1" />
+                <span>구강계통</span>
+              </label>
+            </li>
+            <li>
+              <input type="checkbox" id="inp_check_q01_09" className="inp_check" />
+              <label htmlFor="inp_check_q01_09">
+                <img src="images/ico_x.svg" className="img_type1" />
+                <span>없어요!</span>
+              </label>
+            </li>
           </ul>
         </div>
         <div className="cont type2">
@@ -108,14 +157,21 @@ function Content() {
               <input type="radio" name="inp_radio_q14" id="inp_radio_q14_01" className="inp_radio" />
               <label htmlFor="inp_radio_q14_01">
                 <img src="images/ico_1@3x.png" alt="1번" className="img_type1" />
-                <span>피부계통</span>
+                <span>작은 입자 8mm 미만</span>
               </label>
             </li>
             <li>
               <input type="radio" name="inp_radio_q14" id="inp_check_q14_02" className="inp_radio" />
               <label htmlFor="inp_check_q14_02">
                 <img src="images/ico_2@3x.png" alt="2번" className="img_type1" />
-                <span>소화계통</span>
+                <span>보통 입자 8~13mm</span>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="inp_radio_q14" id="inp_check_q14_03" className="inp_radio" />
+              <label htmlFor="inp_check_q14_03">
+                <img src="images/ico_3@3x.png" alt="3번" className="img_type1" />
+                <span>큰 입자 13mm 이상</span>
               </label>
             </li>
           </ul>
@@ -178,6 +234,14 @@ function Content() {
           </ul>
         </div>
         <div className="cont type5">
+          <div className="head">
+            <em>Q12.</em>
+            <div className="page">12/18</div>
+          </div>
+          <div className="tit">
+            <h3>선호하는 사료 가격대를 선택해 주세요</h3>
+            <p className="notice">최대 2만원 ~ 최대 15만원 사이</p>
+          </div>
           <CompoundSlider
             mode={2}
             step={1}
@@ -220,7 +284,9 @@ function Content() {
               )}
             </Tracks>
           </CompoundSlider>
-          <h2 className="price-period">{compoundSliderOpts?.update[0]}만원 ~ {compoundSliderOpts?.update[1]}만원</h2>
+          <h2 className="price-period txt_bar">
+            {compoundSliderOpts?.update[0]}만원 <span className="txt_bar">~</span> {compoundSliderOpts?.update[1]}만원
+          </h2>
         </div>
       </Slider>
       <style jsx>{ContentStyle}</style>
