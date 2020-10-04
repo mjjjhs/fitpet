@@ -3,15 +3,16 @@ import {RangeStyle, CommonStyle} from "../../Styles";
 import {Handles, Rail, Slider as CompoundSlider, Tracks} from "react-compound-slider";
 import {Handle, SliderRail, Track} from "../CompoundSlider";
 import {CSSProperties, useState} from "react";
+import {IRange} from "../../Interface/Props";
+import {EContent, ENotice} from "../../Enums/Text";
 
 const sliderStyle: CSSProperties = {
   position: 'relative',
   width: '100%'
 };
 
-const defaultValues = [2, 15];
-
-function Range() {
+function Range({title, min, max, curQuestionNum, totalQuestionLength}: IRange) {
+  const defaultValues = [min, max];
   const [compoundSliderOpts, setCompoundSlideruOpts] = useState<{
     domain: [any, any],
     values: number[],
@@ -33,15 +34,20 @@ function Range() {
     ...compoundSliderOpts,
     update: [...values]
   });
+
   return (
     <div className="cont type5">
       <div className="head">
-        <em>Q12.</em>
-        <div className="page">12/18</div>
+        <em>Q{curQuestionNum}.</em>
+        <div className="page">{curQuestionNum}/{totalQuestionLength}</div>
       </div>
       <div className="tit">
-        <h3>선호하는 사료 가격대를 선택해 주세요</h3>
-        <p className="notice">최대 2만원 ~ 최대 15만원 사이</p>
+        <h3>{title}</h3>
+        <p className="notice">
+          {
+            `${ENotice.MIN} ${min}${EContent.WON} ~ ${ENotice.MAX} ${max}${EContent.WON} ${ENotice.BETWEEN}`
+          }
+        </p>
       </div>
       <div className="range">
         <CompoundSlider
@@ -88,7 +94,9 @@ function Range() {
         </CompoundSlider>
       </div>
       <h2 className="price-period txt_bar">
-        {compoundSliderOpts?.update[0]}만원 <span className="txt_bar">~</span> {compoundSliderOpts?.update[1]}만원
+        {compoundSliderOpts?.update[0]}{EContent.WON}
+        <span className="txt_bar"> ~ </span>
+        {compoundSliderOpts?.update[1]}{EContent.WON}
       </h2>
       <style jsx>{CommonStyle}</style>
       <style jsx>{RangeStyle}</style>
