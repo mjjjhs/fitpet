@@ -359,13 +359,4 @@ export const q18 = () => {
 			imgSrc: 'images/dog-02@3x.png',
 		},
 	];
-};ㄴ
-
-export const q = () => {
-	return [
-		{	
-			text: '',
-			imgSrc: 'images/@3x.png',
-		},
-	];
 };
