@@ -69,6 +69,7 @@ export default css`
       .inp_radio {
         & + label {
           display: block;
+          min-height: 198px;
           padding-top: 24px;
           padding-bottom: 32px;
           

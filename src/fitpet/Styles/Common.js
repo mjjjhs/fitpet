@@ -104,6 +104,29 @@ $grey: #999 !default;
     line-height: 16px;
     color: $grey;
   }
-
 }
+
+.ball {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  
+  .active {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      margin: -5px 0 0 -5px;
+      border-radius: 50%;
+      background-color: #154cae;
+      z-index: 100;
+    }
+  }
+  
+}
+
 `;

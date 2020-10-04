@@ -61,6 +61,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
     return clientSize?.height - (drSectionHeight || 0) - 56 - 60 - 88 - 60 - 24;
   }, [clientSize.height, drSectionHeight]);
 
+
   return (
     <div className="content">
       <DrSection

@@ -11,7 +11,8 @@ export default css`
     height: 56px;
     padding: 16px 20px;
     line-height: 56px;
-    background-color: #fff;
+    background-color: rgba(255,255,255,0.9);
+    z-index: 9999;
     
     .logo {
       width: 88px;
