@@ -52,7 +52,7 @@ $grey: #999 !default;
 
   .cont {
     min-height: 368px;
-    padding: 20px;
+    padding: 20px 20px 32px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.1);
