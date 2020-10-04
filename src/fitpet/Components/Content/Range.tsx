@@ -72,10 +72,13 @@ function Range({title, min, max, curQuestionNum, totalQuestionLength, innerScrol
             <Handles>
               {({ handles, getHandleProps }) => (
                 <div className="slider-handles">
-                  {handles.map(handle => (
+                  {handles.map((handle, idx) => (
                     <Handle
                       key={handle.id}
                       handle={handle}
+                      isLeft={!idx && true}
+                      active={active}
+                      setActive={setActive}
                       domain={compoundSliderOpts?.domain}
                       getHandleProps={getHandleProps}
                     />
