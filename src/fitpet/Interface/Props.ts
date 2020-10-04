@@ -8,7 +8,7 @@ export interface ICheckList {
   totalQuestionLength: number;
   title?: string;
   notice?: string;
-  innerScrollHeight: number;
+  innerScrollHeight?: number;
   data?: IData[]
 }
 
