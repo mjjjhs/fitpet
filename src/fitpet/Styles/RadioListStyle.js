@@ -14,6 +14,9 @@ export default css`
   
   .type2 {
     .list_option {
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: calc(100vh - 472px);
       .inp_radio {
         & + label {
           @include py(22px);
