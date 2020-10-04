@@ -9,8 +9,6 @@ export default css`
   
   .type1 {
     .list_option {
-      overflow-x: hidden;
-      overflow-y: auto;
       .inp_check {
         & + label {
           align-item: center;

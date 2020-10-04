@@ -14,6 +14,10 @@ const sliderStyle: CSSProperties = {
 
 function Range({title, min, max, curQuestionNum, totalQuestionLength, innerScrollHeight}: IRange) {
   const defaultValues = [min, max];
+  const [active, setActive] = useState<{left: boolean, right: boolean}>({
+    left: false,
+    right: false
+  });
   const [compoundSliderOpts, setCompoundSlideruOpts] = useState<{
     domain: [any, any],
     values: number[],
