@@ -1,16 +1,21 @@
 import * as React from 'react';
 import {UpDownStyle, CommonStyle} from "../../Styles";
+import {IUpDown} from "../../Interface/Props";
+import {EContent} from "../../Enums/Text";
 
-function UpDown() {
+function UpDown({title, notice, curQuestionNum, totalQuestionLength}: IUpDown) {
   return (
     <div className="cont type3">
       <div className="head">
-        <em>Q4.</em>
-        <div className="page">4/18</div>
+        <em>Q{curQuestionNum}.</em>
+        <div className="page">{curQuestionNum}/{totalQuestionLength}</div>
       </div>
       <div className="tit">
-        <h3>하루 총 몇 컵의 사료를 급여하시나요?</h3>
-        <p className="notice">종이컵 기준</p>
+        <h3>{title}</h3>
+        {
+          notice &&
+            <p className="notice">{notice}</p>
+        }
       </div>
       <ul className="list_option">
         <li>
@@ -25,13 +30,13 @@ function UpDown() {
       </ul>
       <div className="wrap_info">
         <button type="button" className="btn_down">
-          <span className="screen_out">1/3컵 빼기</span>
+          <span className="screen_out">1/3{EContent.CUP} {EContent.SUBTRACTION}</span>
         </button>
         <div className="txt_info">
-          1, 2<span className="txt_bar">/</span>3<strong>컵</strong>
+          1, 2<span className="txt_bar">/</span>3<strong>{EContent.CUP}</strong>
         </div>
         <button type="button" className="btn_up">
-          <span className="screen_out">1/3컵 더하기</span>
+          <span className="screen_out">1/3{EContent.CUP} {EContent.ADDITION}</span>
         </button>
       </div>
       <style jsx>{CommonStyle}</style>

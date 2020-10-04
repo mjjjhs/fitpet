@@ -10,7 +10,7 @@ function DrSection() {
                     images/dr_01@3x.png 768w"
              sizes="(max-width: 319px) 192px,
                     (max-width: 767px) 256px,
-                    512px"
+                    320px"
         />
       </section>
       <style jsx>{DrSectionStyle}</style>
