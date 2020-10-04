@@ -1,5 +1,5 @@
 import * as React from "react";
-import HeaderStyle from "../Styles/HeaderStyle";
+import {HeaderStyle} from "../Styles";
 import {IHeader} from "../Interface/Props";
 
 function Header({isNext, isPrev}: IHeader) {
