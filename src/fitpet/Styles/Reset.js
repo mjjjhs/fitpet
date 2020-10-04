@@ -15,7 +15,7 @@ export default css.global`
   input:checked[type='checkbox'] {background-color:#666; -webkit-appearance:checkbox}
   button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
   input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none}
-  body {background:#eee}
+  body {background:#fff}
   body,th,td,input,select,textarea,button {font-size:14px;line-height:1.43;font-family:'Noto Sans KR',sans-serif;color:#333}
   a {color:#333;text-decoration:none}
   a:active, a:hover {text-decoration:none}

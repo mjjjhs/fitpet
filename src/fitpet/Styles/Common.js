@@ -34,7 +34,7 @@ $grey: #999 !default;
   }
 
   &:checked + label {
-    background: #e3eaf5 url(../images/check@3x.png) right 12px center no-repeat;
+    background: #e3eaf5 url(images/check@3x.png) right 12px center no-repeat;
     background-size: 20px auto;
   }
 }
@@ -51,7 +51,6 @@ $grey: #999 !default;
   }
 
   .cont {
-    height: calc(100vh - 320px);
     min-height: 368px;
     padding: 20px;
     background-color: #fff;

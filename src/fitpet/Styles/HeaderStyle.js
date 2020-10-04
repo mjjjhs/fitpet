@@ -4,9 +4,14 @@ export default css`
     display: flex;
     justify-content: space-between;
     align-item: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     height: 56px;
     padding: 16px 20px;
     line-height: 56px;
+    background-color: #fff;
     
     .logo {
       width: 88px;

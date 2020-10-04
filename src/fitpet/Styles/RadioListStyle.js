@@ -12,11 +12,31 @@ export default css`
     padding-bottom: $px;
   }
   
+  .type1 {
+    .list_option {
+      overflow-x: hidden;
+      overflow-y: auto;
+      .inp_radio {
+        & + label {
+          align-item: center;
+          padding-right: 40px;
+          
+          img {
+            @include wh(20px);
+          }
+          
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  
   .type2 {
     .list_option {
       overflow-x: hidden;
       overflow-y: auto;
-      height: calc(100vh - 472px);
       .inp_radio {
         & + label {
           @include py(22px);
