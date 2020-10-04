@@ -10,18 +10,6 @@ export default css.global`
 $primary: #2b51a2 !default;
 $grey: #999 !default;
 
-/* mixin */
-@mixin wh($px) {
-  width: $px;
-  height: $px;
-  margin-right: 8px;
-}
-
-@mixin py($px) {
-  padding-top: $px;
-  padding-bottom: $px;
-}
-
 /* style */
 .inp_radio,
 .inp_check {
@@ -50,10 +38,6 @@ $grey: #999 !default;
     background-size: 20px auto;
   }
 }
-
-
-
-
 
 .list_option {
   li:not(:first-child) {
