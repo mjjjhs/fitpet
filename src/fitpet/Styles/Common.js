@@ -51,6 +51,7 @@ $grey: #999 !default;
   }
 
   .cont {
+    height: calc(100vh - 320px);
     min-height: 368px;
     padding: 20px;
     background-color: #fff;
