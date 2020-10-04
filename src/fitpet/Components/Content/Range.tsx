@@ -43,48 +43,50 @@ function Range() {
         <h3>선호하는 사료 가격대를 선택해 주세요</h3>
         <p className="notice">최대 2만원 ~ 최대 15만원 사이</p>
       </div>
-      <CompoundSlider
-        mode={2}
-        step={1}
-        domain={compoundSliderOpts?.domain}
-        reversed={compoundSliderOpts?.reversed}
-        rootStyle={sliderStyle}
-        onUpdate={onUpdateCompundSlider}
-        onChange={onChangeCompundSlider}
-        values={compoundSliderOpts?.values}
-      >
-        <Rail>
-          {({ getRailProps }) => <SliderRail getRailProps={getRailProps} />}
-        </Rail>
-        <Handles>
-          {({ handles, getHandleProps }) => (
-            <div className="slider-handles">
-              {handles.map(handle => (
-                <Handle
-                  key={handle.id}
-                  handle={handle}
-                  domain={compoundSliderOpts?.domain}
-                  getHandleProps={getHandleProps}
-                />
-              ))}
-            </div>
-          )}
-        </Handles>
-        <Tracks left={false} right={false}>
-          {({ tracks, getTrackProps }) => (
-            <div className="slider-tracks">
-              {tracks.map(({ id, source, target }) => (
-                <Track
-                  key={id}
-                  source={source}
-                  target={target}
-                  getTrackProps={getTrackProps}
-                />
-              ))}
-            </div>
-          )}
-        </Tracks>
-      </CompoundSlider>
+      <div className="range">
+        <CompoundSlider
+          mode={2}
+          step={1}
+          domain={compoundSliderOpts?.domain}
+          reversed={compoundSliderOpts?.reversed}
+          rootStyle={sliderStyle}
+          onUpdate={onUpdateCompundSlider}
+          onChange={onChangeCompundSlider}
+          values={compoundSliderOpts?.values}
+        >
+          <Rail>
+            {({ getRailProps }) => <SliderRail getRailProps={getRailProps} />}
+          </Rail>
+          <Handles>
+            {({ handles, getHandleProps }) => (
+              <div className="slider-handles">
+                {handles.map(handle => (
+                  <Handle
+                    key={handle.id}
+                    handle={handle}
+                    domain={compoundSliderOpts?.domain}
+                    getHandleProps={getHandleProps}
+                  />
+                ))}
+              </div>
+            )}
+          </Handles>
+          <Tracks left={false} right={false}>
+            {({ tracks, getTrackProps }) => (
+              <div className="slider-tracks">
+                {tracks.map(({ id, source, target }) => (
+                  <Track
+                    key={id}
+                    source={source}
+                    target={target}
+                    getTrackProps={getTrackProps}
+                  />
+                ))}
+              </div>
+            )}
+          </Tracks>
+        </CompoundSlider>
+      </div>
       <h2 className="price-period txt_bar">
         {compoundSliderOpts?.update[0]}만원 <span className="txt_bar">~</span> {compoundSliderOpts?.update[1]}만원
       </h2>
@@ -95,4 +97,3 @@ function Range() {
 }
 
 export default Range;
-
