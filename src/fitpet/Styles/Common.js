@@ -39,10 +39,6 @@ $grey: #999 !default;
   }
 }
 
-
-
-
-
 .list_option {
   li:not(:first-child) {
     margin-top: 5px;
