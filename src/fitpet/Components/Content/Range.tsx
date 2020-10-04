@@ -13,6 +13,10 @@ const sliderStyle: CSSProperties = {
 
 function Range({title, min, max, curQuestionNum, totalQuestionLength}: IRange) {
   const defaultValues = [min, max];
+  const [active, setActive] = useState<{left: boolean, right: boolean}>({
+    left: false,
+    right: false
+  });
   const [compoundSliderOpts, setCompoundSlideruOpts] = useState<{
     domain: [any, any],
     values: number[],
@@ -66,10 +70,13 @@ function Range({title, min, max, curQuestionNum, totalQuestionLength}: IRange) {
           <Handles>
             {({ handles, getHandleProps }) => (
               <div className="slider-handles">
-                {handles.map(handle => (
+                {handles.map((handle, idx) => (
                   <Handle
                     key={handle.id}
                     handle={handle}
+                    isLeft={!idx && true}
+                    active={active}
+                    setActive={setActive}
                     domain={compoundSliderOpts?.domain}
                     getHandleProps={getHandleProps}
                   />

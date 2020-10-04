@@ -11,7 +11,7 @@ export default css`
     .list_option {
       overflow-x: hidden;
       overflow-y: auto;
-      height: 216px;
+      /* height: 216px; */
       /* height: calc(100vh - 472px); */
       .inp_check {
         & + label {

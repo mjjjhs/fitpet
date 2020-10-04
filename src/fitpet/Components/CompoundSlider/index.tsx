@@ -43,12 +43,29 @@ export function Handle({
                          domain: [min, max],
                          handle: { id, value, percent },
                          disabled,
+                         isLeft,
+                         active,
+                         setActive,
                          getHandleProps,
                        }) {
+  
+  const onMouseDownBall = () => {
+    if(isLeft) {
+      setActive({
+        left: true,
+        right: false
+      });
+    } else {
+      setActive({
+        left: false,
+        right: true
+      });
+    }
+  };
   return (
     <Fragment>
       <div
-        className="ball"
+        className={`ball`}
         style={{
           left: `${percent}%`,
           position: 'absolute',
@@ -59,12 +76,19 @@ export function Handle({
           height: 26,
           cursor: 'pointer',
           borderRadius: '50%',
+          boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.2)',
+          background: '#fff',
         }}
         {...getHandleProps(id)}
-      />
-      <div
+        onMouseOver={onMouseDownBall}
+        onClick={onMouseDownBall}
+        onTouchMove={onMouseDownBall}
+      >
+        <div className={isLeft ? (active.left ? 'active' : '') : (active.right ? 'active' : '')}></div>
+      </div>
+      {/* <div
         role="slider"
-        className="ball"
+        className={`ball${isLeft ? (active.left ? ' active' : '') : (active.right ? ' active' : '')}`}
         aria-valuemin={min}
         aria-valuemax={max}
         aria-valuenow={value}
@@ -79,7 +103,9 @@ export function Handle({
           boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.2)',
           backgroundColor: disabled ? '#eee' : '#fff',
         }}
-      />
+        {...getHandleProps(id)} 
+        
+      />*/}
     </Fragment>
   )
 }
@@ -91,6 +117,11 @@ Handle.propTypes = {
     value: PropTypes.number.isRequired,
     percent: PropTypes.number.isRequired,
   }).isRequired,
+  active:  PropTypes.shape({
+    left: PropTypes.bool,
+    right: PropTypes.bool
+  }),
+  setActive: PropTypes.func,
   getHandleProps: PropTypes.func.isRequired,
   disabled: PropTypes.bool,
 }
