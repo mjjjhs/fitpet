@@ -51,7 +51,7 @@ $grey: #999 !default;
   }
 
   .cont {
-    height: calc(100vh - 320px);
+    /* height: calc(100vh - 320px); */
     min-height: 368px;
     padding: 20px;
     background-color: #fff;
@@ -105,6 +105,25 @@ $grey: #999 !default;
     line-height: 16px;
     color: $grey;
   }
-
 }
+
+.ball:focus,
+.ball:active {
+  position: relative;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    margin: -5px 0 0 -5px;
+    border-radius: 50%;
+    background-color: #154cae;
+    z-index: 9999;
+  }
+  
+}
+
 `;

@@ -48,6 +48,7 @@ export function Handle({
   return (
     <Fragment>
       <div
+        className="ball"
         style={{
           left: `${percent}%`,
           position: 'absolute',
@@ -57,12 +58,13 @@ export function Handle({
           width: 26,
           height: 26,
           cursor: 'pointer',
-          backgroundColor: 'none',
+          borderRadius: '50%',
         }}
         {...getHandleProps(id)}
       />
       <div
         role="slider"
+        className="ball"
         aria-valuemin={min}
         aria-valuemax={max}
         aria-valuenow={value}
