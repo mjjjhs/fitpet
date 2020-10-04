@@ -41,10 +41,10 @@ export default css`
       background-size: 32px auto;
     }
     .btn_down {
-      background-image: url(../images/btn_down.svg);
+      background-image: url(images/btn_down.svg);
     }
     .btn_up {
-      background-image: url(../images/btn_up.svg);
+      background-image: url(images/btn_up.svg);
     }
     .txt_info {
       font-size: 30px;

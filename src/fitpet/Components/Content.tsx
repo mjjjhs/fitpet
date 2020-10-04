@@ -78,7 +78,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           // innerScrollHeight={innerScrollHeight}
         />
         <RadioList
-          type='list'
+          type='slimList'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={2}
           title={ETitle.Q2}
