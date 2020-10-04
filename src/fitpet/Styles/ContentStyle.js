@@ -12,11 +12,15 @@ export default css`
     }
   }
   .price-period {
-    margin-top: 16px;
+    margin-top: 26px;
     font-size: 24px;
+    font-family: 'Gilroy';
     line-height: 32px;
-    width: 100%;
     text-align: center;
     color: #333;
+
+    .txt_bar {
+      font-weight: 300;
+    }
   }
 `;

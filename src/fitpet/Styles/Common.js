@@ -71,6 +71,7 @@ $grey: #999 !default;
   }
 } 
 
+/* 리스트 스타일 sm */
 .type1 {
   .list_option {
     .inp_check,
@@ -86,6 +87,7 @@ $grey: #999 !default;
   }
 }
 
+/* 리스트 스타일 lg */
 .type2 {
   .list_option {
     .inp_check,
@@ -102,6 +104,7 @@ $grey: #999 !default;
   }
 }
 
+/* 물컵 */
 .type3 {
   .list_option {
     display: flex;
@@ -149,10 +152,10 @@ $grey: #999 !default;
     .txt_bar {
       font-weight: 300;
     }
-  }
-  
+  }  
 }
 
+/* OX */
 .type4 {
   .list_option {
     display: flex;
@@ -185,7 +188,14 @@ $grey: #999 !default;
   }
 }
 
-
+/* RANGE */
+.type5 {
+  .range {
+    min-height: 1px;
+    margin-top: 78px;
+    padding: 0 13px;
+  }
+}
 
 
 .slider_box {
