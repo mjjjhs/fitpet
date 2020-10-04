@@ -16,7 +16,8 @@ export default css`
     .list_option {
       overflow-x: hidden;
       overflow-y: auto;
-      height: calc(100vh - 472px);
+      /* height: 216px; */
+      /* height: calc(100vh - 472px); */
       .inp_radio {
         & + label {
           @include py(22px);
@@ -49,6 +50,7 @@ export default css`
       .inp_radio {
         & + label {
           display: block;
+          min-height: 198px;
           padding-top: 24px;
           padding-bottom: 32px;
           

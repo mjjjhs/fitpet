@@ -34,7 +34,7 @@ $grey: #999 !default;
   }
 
   &:checked + label {
-    background: #e3eaf5 url(../images/check@3x.png) right 12px center no-repeat;
+    background: #e3eaf5 url(images/check@3x.png) right 12px center no-repeat;
     background-size: 20px auto;
   }
 }
@@ -51,7 +51,7 @@ $grey: #999 !default;
   }
 
   .cont {
-    height: calc(100vh - 320px);
+    /* height: calc(100vh - 320px); */
     min-height: 368px;
     padding: 20px;
     background-color: #fff;
@@ -105,6 +105,29 @@ $grey: #999 !default;
     line-height: 16px;
     color: $grey;
   }
-
 }
+
+.ball {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  
+  .active {
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 10px;
+      height: 10px;
+      margin: -5px 0 0 -5px;
+      border-radius: 50%;
+      background-color: #154cae;
+      z-index: 100;
+    }
+  }
+  
+}
+
 `;
