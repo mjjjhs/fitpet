@@ -2,7 +2,8 @@ import * as React from 'react';
 import {UpDownStyle, CommonStyle} from "../../Styles";
 import {IUpDown} from "../../Interface/Props";
 import {EContent} from "../../Enums/Text";
-// import { Scrollbars } from 'react-custom-scrollbars';
+import {EScroll} from "../../Enums/Config";
+import Scrollbar from "react-scrollbars-custom";
 
 function UpDown({title, notice, curQuestionNum, totalQuestionLength, innerScrollHeight}: IUpDown) {
   return (
@@ -22,7 +23,18 @@ function UpDown({title, notice, curQuestionNum, totalQuestionLength, innerScroll
             <p className="notice">{notice}</p>
         }
       </div>
-      {/*<Scrollbars style={{height: innerScrollHeight || 0}}>*/}
+      <Scrollbar
+        trackYProps={{
+          renderer: props => {
+            const { elementRef, ...restProps } = props;
+            restProps.style.width = EScroll.SCROLL_WIDTH;
+            return <span {...restProps} ref={elementRef} className="trackY"  />;
+          }
+        }}
+        removeTracksWhenNotUsed={true}
+        noScrollX={true}
+        style={{ height: EScroll.HEIGHT }}
+      >
         <ul className="list_option">
           <li>
             <img src="images/cup_full@3x.png" alt="1컵" />
@@ -45,7 +57,7 @@ function UpDown({title, notice, curQuestionNum, totalQuestionLength, innerScroll
             <span className="screen_out">1/3{EContent.CUP} {EContent.ADDITION}</span>
           </button>
         </div>
-      {/*</Scrollbars>*/}
+      </Scrollbar>
       <style jsx>{CommonStyle}</style>
       <style jsx>{UpDownStyle}</style>
     </div>

@@ -5,7 +5,8 @@ import {Handle, SliderRail, Track} from "../CompoundSlider";
 import {CSSProperties, useState} from "react";
 import {IRange} from "../../Interface/Props";
 import {EContent, ENotice} from "../../Enums/Text";
-// import { Scrollbars } from 'react-custom-scrollbars';
+import {EScroll} from "../../Enums/Config";
+import Scrollbar from "react-scrollbars-custom";
 
 const sliderStyle: CSSProperties = {
   position: 'relative',
@@ -58,7 +59,18 @@ function Range({title, min, max, curQuestionNum, totalQuestionLength, innerScrol
           }
         </p>
       </div>
-      {/*<Scrollbars style={{height: innerScrollHeight || 0}}>*/}
+      <Scrollbar
+        trackYProps={{
+          renderer: props => {
+            const { elementRef, ...restProps } = props;
+            restProps.style.width = EScroll.SCROLL_WIDTH;
+            return <span {...restProps} ref={elementRef} className="trackY"  />;
+          }
+        }}
+        removeTracksWhenNotUsed={true}
+        noScrollX={true}
+        style={{ height: EScroll.HEIGHT }}
+      >
         <div className="range">
           <CompoundSlider
             mode={2}
@@ -111,7 +123,7 @@ function Range({title, min, max, curQuestionNum, totalQuestionLength, innerScrol
           <span className="txt_bar"> ~ </span>
           {compoundSliderOpts?.update[1]}{EContent.WON}
         </h2>
-      {/*</Scrollbars>*/}
+      </Scrollbar>
       <style jsx>{CommonStyle}</style>
       <style jsx>{RangeStyle}</style>
     </div>

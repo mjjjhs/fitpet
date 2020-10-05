@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {RadioListStyle, CommonStyle} from "../../Styles";
 import {IRadioList} from "../../Interface/Props";
-// import { Scrollbars } from 'react-custom-scrollbars';
+import {EScroll} from "../../Enums/Config";
+import Scrollbar from "react-scrollbars-custom";
 
 function RadioList({type, curQuestionNum, totalQuestionLength, title, data, innerScrollHeight}: IRadioList) {
   return (
@@ -17,7 +18,18 @@ function RadioList({type, curQuestionNum, totalQuestionLength, title, data, inne
           {title[1]}
         </h3>
       </div>
-      {/*<Scrollbars style={{height: innerScrollHeight || 0}}>*/}
+      <Scrollbar
+        trackYProps={{
+          renderer: props => {
+            const { elementRef, ...restProps } = props;
+            restProps.style.width = EScroll.SCROLL_WIDTH;
+            return <span {...restProps} ref={elementRef} className="trackY"  />;
+          }
+        }}
+        removeTracksWhenNotUsed={true}
+        noScrollX={true}
+        style={{ height: EScroll.HEIGHT }}
+      >
         <ul className="list_option">
           <React.Fragment>
             {
@@ -37,7 +49,7 @@ function RadioList({type, curQuestionNum, totalQuestionLength, title, data, inne
             }
           </React.Fragment>
         </ul>
-      {/*</Scrollbars>*/}
+      </Scrollbar>
       <style jsx>{CommonStyle}</style>
       <style jsx>{RadioListStyle}</style>
     </div>

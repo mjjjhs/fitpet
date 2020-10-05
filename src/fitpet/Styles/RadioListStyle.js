@@ -14,9 +14,6 @@ export default css`
   
   .type1 {
     .list_option {
-      overflow-x: hidden;
-      overflow-y: auto;
-      height: 207px;
       .inp_radio {
         & + label {
           align-item: center;
@@ -36,9 +33,6 @@ export default css`
   
   .type2 {
     .list_option {
-      overflow-x: hidden;
-      overflow-y: auto;
-      height: 207px;
       .inp_radio {
         & + label {
           @include py(22px);
@@ -60,7 +54,7 @@ export default css`
     .list_option {
       display: flex;
       justify-content: space-between;
-      margin: 0 -8px;
+      margin: 0 -4px;
   
       li {
         width: 50%;

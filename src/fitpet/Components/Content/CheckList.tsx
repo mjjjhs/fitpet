@@ -1,7 +1,8 @@
 import * as React from 'react';
 import {CheckListStyle, CommonStyle} from "../../Styles";
 import {ICheckList} from "../../Interface/Props";
-// import { Scrollbars } from 'react-custom-scrollbars';
+import Scrollbar from "react-scrollbars-custom";
+import {EScroll} from "../../Enums/Config";
 
 function CheckList({curQuestionNum, totalQuestionLength, title, notice, data, innerScrollHeight}: ICheckList) {
   return (
@@ -21,7 +22,18 @@ function CheckList({curQuestionNum, totalQuestionLength, title, notice, data, in
             <p className="notice">{notice}</p>
         }
       </div>
-      {/*<Scrollbars style={{height: innerScrollHeight || 0}}>*/}
+      <Scrollbar
+        trackYProps={{
+          renderer: props => {
+            const { elementRef, ...restProps } = props;
+            restProps.style.width = EScroll.SCROLL_WIDTH;
+            return <span {...restProps} ref={elementRef} className="trackY"  />;
+          }
+        }}
+        removeTracksWhenNotUsed={true}
+        noScrollX={true}
+        style={{ height: EScroll.HEIGHT }}
+      >
         <ul className="list_option">
             {
               data &&
@@ -39,7 +51,7 @@ function CheckList({curQuestionNum, totalQuestionLength, title, notice, data, in
                 )
             }
         </ul>
-      {/*</Scrollbars>*/}
+      </Scrollbar>
       <style jsx>{CommonStyle}</style>
       <style jsx>{CheckListStyle}</style>
     </div>
