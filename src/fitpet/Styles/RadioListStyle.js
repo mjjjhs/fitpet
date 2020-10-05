@@ -16,6 +16,7 @@ export default css`
     .list_option {
       overflow-x: hidden;
       overflow-y: auto;
+      height: 207px;
       .inp_radio {
         & + label {
           align-item: center;
@@ -37,6 +38,7 @@ export default css`
     .list_option {
       overflow-x: hidden;
       overflow-y: auto;
+      height: 207px;
       .inp_radio {
         & + label {
           @include py(22px);

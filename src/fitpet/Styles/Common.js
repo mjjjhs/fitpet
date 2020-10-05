@@ -51,7 +51,7 @@ $grey: #999 !default;
   }
 
   .cont {
-    min-height: 368px;
+    height: 368px;
     padding: 20px 20px 32px;
     background-color: #fff;
     border-radius: 10px;
@@ -78,13 +78,13 @@ $grey: #999 !default;
     display: block;
     height: 20px;
     font-size: 20px;
-    font-family: 'Gilroy';
+    font-family: 'Gilroy', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
     font-weight: 800;
     color: $primary;
   }
 
   .page {
-    font-family: 'Gilroy';
+    font-family: 'Gilroy', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
     font-size: 15px;
     text-align: right;
     color: $grey;

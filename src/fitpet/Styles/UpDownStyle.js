@@ -48,7 +48,7 @@ export default css`
     }
     .txt_info {
       font-size: 30px;
-      font-family: 'Gilroy';
+      font-family: 'Gilroy', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
       font-weight: 800;
       line-height: 32px;
   

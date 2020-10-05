@@ -16,7 +16,7 @@ export default css.global`
   button,input[type='button'],input[type='submit'],input[type='reset'],input[type='file'] {-webkit-appearance:button; border-radius:0}
   input[type='search']::-webkit-search-cancel-button {-webkit-appearance:none}
   body {background:#fff}
-  body,th,td,input,select,textarea,button {font-size:14px;line-height:1.43;font-family:'Noto Sans KR',sans-serif;color:#333}
+  body,th,td,input,select,textarea,button {font-size:14px;line-height:1.43;font-family:'Noto Sans KR', 'Apple SD Gothic Neo', 'helvetica neue', sans-serif;color:#333}
   a {color:#333;text-decoration:none}
   a:active, a:hover {text-decoration:none}
   address,caption,cite,code,dfn,em,var {font-style:normal;font-weight:normal}
