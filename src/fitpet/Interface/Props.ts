@@ -6,7 +6,7 @@ export interface IHeader {
 export interface ICheckList {
   curQuestionNum: number;
   totalQuestionLength: number;
-  title?: string;
+  title?: string[];
   notice?: string;
   innerScrollHeight?: number;
   data?: IData[]

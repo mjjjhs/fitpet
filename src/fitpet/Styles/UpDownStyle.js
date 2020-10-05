@@ -41,14 +41,14 @@ export default css`
       background-size: 32px auto;
     }
     .btn_down {
-      background-image: url(images/btn_down.svg);
+      background-image: url(images/btn_down@3x.png);
     }
     .btn_up {
-      background-image: url(images/btn_up.svg);
+      background-image: url(images/btn_up@3x.png);
     }
     .txt_info {
       font-size: 30px;
-      font-family: 'Gilroy', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
+      font-family: 'gilroyextrabold', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
       font-weight: 800;
       line-height: 32px;
   
@@ -58,6 +58,7 @@ export default css`
       }
   
       .txt_bar {
+        font-family: 'gilroylight', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
         font-weight: 300;
       }
     }

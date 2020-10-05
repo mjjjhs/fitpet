@@ -11,7 +11,11 @@ function CheckList({curQuestionNum, totalQuestionLength, title, notice, data, in
         <div className="page">{curQuestionNum}/{totalQuestionLength}</div>
       </div>
       <div className="tit">
-        <h3>{title}</h3>
+        <h3>
+          {title[0]}
+          <br />
+          {title[1]}
+        </h3>
         {
           notice &&
             <p className="notice">{notice}</p>

@@ -11,7 +11,7 @@ export default css`
   .price-period {
     margin-top: 26px;
     font-size: 24px;
-    font-family: 'Gilroy', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
+    font-family: 'gilroylight', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
     line-height: 32px;
     text-align: center;
     color: #333;

@@ -11,7 +11,11 @@ function RadioList({type, curQuestionNum, totalQuestionLength, title, data, inne
         <div className="page">{curQuestionNum}/{totalQuestionLength}</div>
       </div>
       <div className="tit">
-        <h3>{title}</h3>
+        <h3>
+          {title[0]}
+          <br />
+          {title[1]}
+        </h3>
       </div>
       {/*<Scrollbars style={{height: innerScrollHeight || 0}}>*/}
         <ul className="list_option">

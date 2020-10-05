@@ -12,7 +12,11 @@ function UpDown({title, notice, curQuestionNum, totalQuestionLength, innerScroll
         <div className="page">{curQuestionNum}/{totalQuestionLength}</div>
       </div>
       <div className="tit">
-        <h3>{title}</h3>
+        <h3>
+          {title[0]}
+          <br />
+          {title[1]}
+        </h3>
         {
           notice &&
             <p className="notice">{notice}</p>
@@ -35,7 +39,7 @@ function UpDown({title, notice, curQuestionNum, totalQuestionLength, innerScroll
             <span className="screen_out">1/3{EContent.CUP} {EContent.SUBTRACTION}</span>
           </button>
           <div className="txt_info">
-            1, 2<span className="txt_bar">/</span>3<strong>{EContent.CUP}</strong>
+            1, 2<span className="txt_bar">/</span>3{EContent.CUP}
           </div>
           <button type="button" className="btn_up">
             <span className="screen_out">1/3{EContent.CUP} {EContent.ADDITION}</span>

@@ -73,7 +73,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           curQuestionNum={1}
           totalQuestionLength={totalQeustionLength}
           notice={ENotice.MULTIPLE}
-          title={ETitle.Q1}
+          title={[ETitle.Q1, ETitle.Q1_2]}
           data={q1()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -81,7 +81,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='slimList'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={2}
-          title={ETitle.Q2}
+          title={[ETitle.Q2, ETitle.Q2_2]}
           data={q2()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -89,7 +89,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           curQuestionNum={3}
           totalQuestionLength={totalQeustionLength}
           notice={ENotice.MAX_TWO}
-          title={ETitle.Q3}
+          title={[ETitle.Q3, ETitle.Q3_2]}
           data={q3()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -97,14 +97,14 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           curQuestionNum={4}
           totalQuestionLength={totalQeustionLength}
           notice={ENotice.STANDARD_CUP}
-          title={ETitle.Q4}
+          title={[ETitle.Q4, ETitle.Q4_2]}
           // innerScrollHeight={innerScrollHeight}
         />
         <RadioList
           type='img'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={5}
-          title={ETitle.Q5}
+          title={[ETitle.Q5, ETitle.Q5_2]}
           data={q5()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -112,7 +112,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='img'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={6}
-          title={ETitle.Q6}
+          title={[ETitle.Q6, ETitle.Q6_2]}
           data={q6()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -120,7 +120,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='slimList'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={7}
-          title={ETitle.Q7}
+          title={[ETitle.Q7, ETitle.Q7_2]}
           data={q7()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -128,7 +128,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='img'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={8}
-          title={ETitle.Q8}
+          title={[ETitle.Q8, ETitle.Q8_2]}
           data={q8()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -136,7 +136,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           curQuestionNum={9}
           totalQuestionLength={totalQeustionLength}
           notice={ENotice.MAX_TWO}
-          title={ETitle.Q9}
+          title={[ETitle.Q9, ETitle.Q9_2]}
           data={q9()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -144,7 +144,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='img'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={10}
-          title={ETitle.Q10}
+          title={[ETitle.Q10, ETitle.Q10_2]}
           notice={ENotice.NOTICE}
           data={q10()}
           // innerScrollHeight={innerScrollHeight}
@@ -153,7 +153,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           curQuestionNum={11}
           totalQuestionLength={totalQeustionLength}
           notice={ENotice.MAX_THREE}
-          title={ETitle.Q11}
+          title={[ETitle.Q11, ETitle.Q11_2]}
           data={q11()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -162,14 +162,14 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           totalQuestionLength={totalQeustionLength}
           min={2}
           max={15}
-          title={ETitle.Q12}
+          title={[ETitle.Q12, ETitle.Q12_2]}
           // innerScrollHeight={innerScrollHeight}
         />
         <RadioList
           type='slimList'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={13}
-          title={ETitle.Q13}
+          title={[ETitle.Q13, ETitle.Q13_2]}
           data={q13()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -177,7 +177,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='list'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={14}
-          title={ETitle.Q14}
+          title={[ETitle.Q14, ETitle.Q14_2]}
           data={q14()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -185,7 +185,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='list'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={15}
-          title={ETitle.Q15}
+          title={[ETitle.Q15, ETitle.Q15_2]}
           data={q15()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -193,7 +193,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='slimList'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={16}
-          title={ETitle.Q16}
+          title={[ETitle.Q16, ETitle.Q16_2]}
           data={q16()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -201,7 +201,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='slimList'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={17}
-          title={ETitle.Q17}
+          title={[ETitle.Q17, ETitle.Q17_2]}
           data={q17()}
           // innerScrollHeight={innerScrollHeight}
         />
@@ -209,7 +209,7 @@ function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: b
           type='img'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={18}
-          title={ETitle.Q18}
+          title={[ETitle.Q18, ETitle.Q18_2]}
           data={q18()}
           // innerScrollHeight={innerScrollHeight}
         />

@@ -34,7 +34,7 @@ export const q1 = () => {
 		},
 		{	
 			text: '없어요!',
-			imgSrc: 'images/ico_x.svg',
+			imgSrc: 'images/ico_x@3x.png',
 		},
 	];
 };
@@ -55,7 +55,7 @@ export const q2 = () => {
 		},
 		{	
 			text: '없어요!',
-			imgSrc: 'images/ico_x.svg',
+			imgSrc: 'images/ico_x@3x.png',
 		},
 	];
 };
@@ -96,11 +96,11 @@ export const q3 = () => {
 		},
 		{	
 			text: '불명',
-			imgSrc: 'images/ico_unknown.svg',
+			imgSrc: 'images/ico_unknown@3x.png',
 		},
 		{	
 			text: '다 잘 먹어요!',
-			imgSrc: 'images/ico_o.svg',
+			imgSrc: 'images/ico_o@3x.png',
 		},
 	];
 };
@@ -201,11 +201,11 @@ export const q9 = () => {
 		},
 		{	
 			text: '불명',
-			imgSrc: 'images/ico_unknown.svg',
+			imgSrc: 'images/ico_unknown@3x.png',
 		},
 		{	
 			text: '다 잘 먹어요!',
-			imgSrc: 'images/ico_o.svg',
+			imgSrc: 'images/ico_o@3x.png',
 		},
 	];
 };

@@ -3,8 +3,21 @@ export default css.global`
 
 /* font */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap');
-@import url('fonts/Gilroy-ExtraBold.otf');
-@import url('fonts/Gilroy-Light.otf');
+@font-face {
+    font-family: 'gilroyextrabold';
+    src: url('fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
+         url('fonts/gilroy-extrabold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'gilroylight';
+    src: url('fonts/gilroy-light-webfont.woff2') format('woff2'),
+         url('fonts/gilroy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* variable */
 $primary: #2b51a2 !default;
@@ -78,13 +91,13 @@ $grey: #999 !default;
     display: block;
     height: 20px;
     font-size: 20px;
-    font-family: 'Gilroy', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
+    font-family: 'gilroyextrabold', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
     font-weight: 800;
     color: $primary;
   }
 
   .page {
-    font-family: 'Gilroy', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
+    font-family: 'gilroylight', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
     font-size: 15px;
     text-align: right;
     color: $grey;

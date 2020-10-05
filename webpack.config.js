@@ -183,8 +183,9 @@ module.exports = () => {
                 meta: {
                     'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
                     // Will generate: <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-                    'theme-color': '#4285f4'
+                    'theme-color': '#2b51a2',
                     // Will generate: <meta name="theme-color" content="#4285f4">
+                    'og:image': 'images/logo_fitpet@3x.png'
                 },
                 showErrors: true,
                 template: './public/index.html', // public/index.html 파일을 읽는다.
