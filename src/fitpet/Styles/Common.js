@@ -7,7 +7,7 @@ export default css.global`
     font-family: 'gilroyextrabold';
     src: url('fonts/gilroy-extrabold-webfont.woff2') format('woff2'),
          url('fonts/gilroy-extrabold-webfont.woff') format('woff');
-    font-weight: normal;
+    font-weight: 800;
     font-style: normal;
 }
 
@@ -105,7 +105,7 @@ $grey: #999 !default;
   
   h3 {
     display: block;
-    font-size:18px;
+    font-size: 20px;
     font-wieght: bold;
     word-break: keep-all;
   }
@@ -139,7 +139,5 @@ $grey: #999 !default;
       z-index: 100;
     }
   }
-  
 }
-
 `;
