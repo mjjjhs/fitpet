@@ -30,7 +30,9 @@ function UpDown() {
           <span className="screen_out">1/4{EContent.CUP} {EContent.SUBTRACTION}</span>
         </button>
         <div className="txt_info">
-          1, 3<span className="txt_bar">/</span>4{EContent.CUP}
+          1과 3
+          <span className="txt_bar">/</span>
+          4{EContent.CUP}
         </div>
         <button type="button" className="btn_up">
           <span className="screen_out">1/4{EContent.CUP} {EContent.ADDITION}</span>

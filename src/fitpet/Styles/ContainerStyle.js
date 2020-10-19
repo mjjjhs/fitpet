@@ -4,5 +4,8 @@ export default css`
     max-width: 768px;
     margin: 0 auto;
     background: #fff;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
   }
 `;

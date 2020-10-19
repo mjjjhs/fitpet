@@ -181,7 +181,7 @@ module.exports = () => {
                 minify: true,
                 favicon: '',
                 meta: {
-                    'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no',
+                    'viewport': 'width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1, user-scalable=0',
                     // Will generate: <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
                     'theme-color': '#2b51a2',
                     // Will generate: <meta name="theme-color" content="#4285f4">
