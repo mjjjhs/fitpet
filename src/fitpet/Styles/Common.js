@@ -187,5 +187,7 @@ $grey: #999 !default;
     }
   }
 }
-
+input[type="text"]:focus {
+    -webkit-text-size-adjust: 100%;
+}
 `;
