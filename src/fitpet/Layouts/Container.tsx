@@ -10,10 +10,7 @@ function Container({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait:
         isNext={true}
         isPrev={true}
       />
-      <Content
-        isPortrait={isPortrait}
-        isLandscape={isLandscape}
-      />
+      <Content />
       <style jsx>{ContainerStyle}</style>
     </div>
   );

@@ -1,7 +1,7 @@
 {
   "name": "fitpet",
   "version": "0.0.1",
-  "description": "fetpet",
+  "description": "fitpet",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,7 +15,6 @@
     "axios": "^0.19.2",
     "lodash-es": "^4.17.15",
     "react-compound-slider": "^2.5.0",
-    "react-device-detect": "^1.13.1",
     "react-redux": "^7.2.0",
     "react-scrollbars-custom": "^4.0.25",
     "react-slick": "^0.27.11",

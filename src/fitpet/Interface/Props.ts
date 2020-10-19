@@ -2,27 +2,23 @@ export interface IHeader {
   isNext?: boolean;
   isPrev?: boolean;
 }
-
-export interface ICheckList {
-  curQuestionNum: number;
-  totalQuestionLength: number;
+export interface ITitle {
+  targetName?: string;
+  curQuestionNum?: number;
+  totalQuestionLength?: number;
   title?: string[];
   notice?: string;
-  innerScrollHeight?: number;
-  data?: IData[]
+  min?: number;
+  max?: number;
+}
+export interface IContent extends ITitle{
+  data?: IData[],
+  typeName?: string;
+  type?: string;
 }
 
 export interface IData {
   text?: string;
+  subText?: string;
   imgSrc?: string;
-}
-
-export interface IRadioList extends ICheckList {
-  type?: string;
-}
-
-export interface IUpDown extends ICheckList {}
-export interface IRange extends ICheckList {
-  min?: number;
-  max?: number;
 }
