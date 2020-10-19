@@ -1,19 +1,17 @@
 import * as React from 'react';
-import {RangeStyle, CommonStyle} from "../../Styles";
+import {CommonStyle, ContentByTypeStyle} from "../../Styles";
 import {Handles, Rail, Slider as CompoundSlider, Tracks} from "react-compound-slider";
 import {Handle, SliderRail, Track} from "../CompoundSlider";
 import {CSSProperties, useState} from "react";
-import {IRange} from "../../Interface/Props";
-import {EContent, ENotice} from "../../Enums/Text";
-import {EScroll} from "../../Enums/Config";
-import Scrollbar from "react-scrollbars-custom";
+import {IContent} from "../../Interface/Props";
+import {EContent} from "../../Enums/Text";
 
 const sliderStyle: CSSProperties = {
   position: 'relative',
   width: '100%'
 };
 
-function Range({title, min, max, curQuestionNum, totalQuestionLength, innerScrollHeight}: IRange) {
+function Range({min, max}: IContent) {
   const defaultValues = [min, max];
   const [active, setActive] = useState<{left: boolean, right: boolean}>({
     left: false,
@@ -42,91 +40,62 @@ function Range({title, min, max, curQuestionNum, totalQuestionLength, innerScrol
   });
 
   return (
-    <div className="cont type5">
-      <div className="head">
-        <em>Q{curQuestionNum}.</em>
-        <div className="page">{curQuestionNum}/{totalQuestionLength}</div>
+    <React.Fragment>
+      <div className="range">
+        <CompoundSlider
+          mode={2}
+          step={1}
+          domain={compoundSliderOpts?.domain}
+          reversed={compoundSliderOpts?.reversed}
+          rootStyle={sliderStyle}
+          onUpdate={onUpdateCompundSlider}
+          onChange={onChangeCompundSlider}
+          values={compoundSliderOpts?.values}
+        >
+          <Rail>
+            {({ getRailProps }) => <SliderRail getRailProps={getRailProps} />}
+          </Rail>
+          <Handles>
+            {({ handles, getHandleProps }) => (
+              <div className="slider-handles">
+                {handles.map((handle, idx) => (
+                  <Handle
+                    key={handle.id}
+                    handle={handle}
+                    isLeft={!idx && true}
+                    active={active}
+                    setActive={setActive}
+                    domain={compoundSliderOpts?.domain}
+                    getHandleProps={getHandleProps}
+                  />
+                ))}
+              </div>
+            )}
+          </Handles>
+          <Tracks left={false} right={false}>
+            {({ tracks, getTrackProps }) => (
+              <div className="slider-tracks">
+                {tracks.map(({ id, source, target }) => (
+                  <Track
+                    key={id}
+                    source={source}
+                    target={target}
+                    getTrackProps={getTrackProps}
+                  />
+                ))}
+              </div>
+            )}
+          </Tracks>
+        </CompoundSlider>
       </div>
-      <div className="tit">
-        <h3>
-          {title[0]}
-          <br />
-          {title[1]}
-        </h3>
-        <p className="notice">
-          {
-            `${ENotice.MIN} ${min}${EContent.WON} ~ ${ENotice.MAX} ${max}${EContent.WON} ${ENotice.BETWEEN}`
-          }
-        </p>
-      </div>
-      <Scrollbar
-        trackYProps={{
-          renderer: props => {
-            const { elementRef, ...restProps } = props;
-            restProps.style.width = EScroll.SCROLL_WIDTH;
-            return <span {...restProps} ref={elementRef} className="trackY"  />;
-          }
-        }}
-        removeTracksWhenNotUsed={true}
-        noScrollX={true}
-        style={{ height: EScroll.HEIGHT }}
-      >
-        <div className="range">
-          <CompoundSlider
-            mode={2}
-            step={1}
-            domain={compoundSliderOpts?.domain}
-            reversed={compoundSliderOpts?.reversed}
-            rootStyle={sliderStyle}
-            onUpdate={onUpdateCompundSlider}
-            onChange={onChangeCompundSlider}
-            values={compoundSliderOpts?.values}
-          >
-            <Rail>
-              {({ getRailProps }) => <SliderRail getRailProps={getRailProps} />}
-            </Rail>
-            <Handles>
-              {({ handles, getHandleProps }) => (
-                <div className="slider-handles">
-                  {handles.map((handle, idx) => (
-                    <Handle
-                      key={handle.id}
-                      handle={handle}
-                      isLeft={!idx && true}
-                      active={active}
-                      setActive={setActive}
-                      domain={compoundSliderOpts?.domain}
-                      getHandleProps={getHandleProps}
-                    />
-                  ))}
-                </div>
-              )}
-            </Handles>
-            <Tracks left={false} right={false}>
-              {({ tracks, getTrackProps }) => (
-                <div className="slider-tracks">
-                  {tracks.map(({ id, source, target }) => (
-                    <Track
-                      key={id}
-                      source={source}
-                      target={target}
-                      getTrackProps={getTrackProps}
-                    />
-                  ))}
-                </div>
-              )}
-            </Tracks>
-          </CompoundSlider>
-        </div>
-        <h2 className="price-period txt_bar">
-          {compoundSliderOpts?.update[0]}{EContent.WON}
-          <span className="txt_bar"> ~ </span>
-          {compoundSliderOpts?.update[1]}{EContent.WON}
-        </h2>
-      </Scrollbar>
+      <h2 className="price-period txt_bar">
+        {compoundSliderOpts?.update[0]}{EContent.WON}
+        <span className="txt_bar"> ~ </span>
+        {compoundSliderOpts?.update[1]}{EContent.WON}
+      </h2>
       <style jsx>{CommonStyle}</style>
-      <style jsx>{RangeStyle}</style>
-    </div>
+      <style jsx>{ContentByTypeStyle}</style>
+    </React.Fragment>
   );
 }
 

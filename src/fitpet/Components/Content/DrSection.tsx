@@ -11,43 +11,19 @@ function DrSection({
   clientWidth?: number
 }) {
   const drSection: LegacyRef<HTMLDivElement> = createRef();
-  //
-  // useEffect(() => {
-  //   if(!drSection?.current?.offsetHeight) {
-  //     return;
-  //   }
-  //   setDrSectionHeight(drSection.current.offsetHeight);
-  // }, [clientWidth]);
-
-  /*const onImgLoad = (e: SyntheticEvent): void => {
-    if(isMobile) {
-      if(isSafari) {
-        setDrSectionHeight(e.currentTarget.clientHeight + 40);
-      } else if(getUA.includes('KAKAOTALK')) {
-        setDrSectionHeight(e.currentTarget.clientHeight - 110);
-      } else {
-        setDrSectionHeight(e.currentTarget.clientHeight + 150 );
-      }
-    } else {
-      if(isSafari) {
-        setDrSectionHeight(e.currentTarget.clientHeight + 40);
-      } else {
-        setDrSectionHeight(e.currentTarget.clientHeight + 110);
-      }
-    }
-  };*/
-
   return (
     <React.Fragment>
       <section className="feature_dr" ref={drSection}>
-        <img src="images/dr_01.png"
-             srcSet="images/dr_01@2x.png 320w,
-                    images/dr_01@3x.png 768w"
-             sizes="(max-width: 319px) 192px,
-                    (max-width: 767px) 256px,
-                    320px"
-             // onLoad={onImgLoad}
-        />
+        <div className="inner">
+          <img src="images/dr.png"
+              srcSet="images/dr@2x.png 320w,
+                      images/dr@3x.png 768w"
+              sizes="(max-width: 319px) 192px,
+                      (max-width: 767px) 256px,
+                      320px"
+              // onLoad={onImgLoad}
+          />
+        </div>
       </section>
       <style jsx>{DrSectionStyle}</style>
     </React.Fragment>

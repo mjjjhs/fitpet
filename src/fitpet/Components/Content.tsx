@@ -1,12 +1,14 @@
 import * as React from "react";
 import {ContentStyle} from "../Styles";
 import Slider from "react-slick";
-import {DrSection, CheckList, RadioList, UpDown, Range} from './Content/index';
+import {DrSection} from './Content/index';
 import {ISlickSettings} from "../Interface/SlickSlider";
 import {ENotice, ETitle} from "../Enums/Text";
-import {q1, q2, q3, q5, q6, q7, q8, q9, q10, q11, q13, q14, q15, q16, q17, q18} from '../Mock/GetData';
-import {useEffect, useMemo, useState} from "react";
-import {isMobile} from 'react-device-detect';
+import {
+  q1, q11, q12, q13, q14, q15, q2, q4, q5,
+  q6, q7, q8
+} from '../Mock/GetData';
+import ContentByType from "./Content/ContentByType";
 
 const settings: ISlickSettings = {
   className: "slider_box",
@@ -20,198 +22,135 @@ const settings: ISlickSettings = {
   adaptiveHeight: true,
 };
 
-const totalQeustionLength: number = 18;
+const totalQeustionLength: number = 15;
+const targetName: string = '복돌';
 
-function Content({isPortrait, isLandscape}: {isLandscape: boolean, isPortrait: boolean}) {
-  // const [clientSize, setClientSize] = useState<{height: number, width: number}>({
-  //   height: window.outerHeight,
-  //   width: window.outerWidth
-  // });
-
-  // const [drSectionHeight, setDrSectionHeight] = useState<number>();
-
-  // const onResize = (e: UIEvent): void => {
-  //   setClientSize({
-  //     height: window.outerHeight,
-  //     width: window.outerWidth
-  //   });
-  // };
-
-  // useEffect(() => {
-  //   if(isMobile) {
-  //     return;
-  //   }
-  //   window.addEventListener("resize", onResize);
-  //   return () => {
-  //     window.removeEventListener("resize", onResize);
-  //   };
-  // }, []);
-
-  // useEffect(() => {
-  //   if(!isMobile) {
-  //     return;
-  //   }
-  //   setClientSize({
-  //     ...clientSize,
-  //     width: window.outerWidth
-  //   });
-  // }, [isPortrait]);
-
-  // const innerScrollHeight = useMemo(() => {
-  //   return clientSize?.height - (drSectionHeight || 0) - 56 - 60 - 88 - 60 - 24;
-  // }, [clientSize.height, drSectionHeight]);
-
+function Content() {
 
   return (
     <div className="content">
-      <DrSection
-        // setDrSectionHeight={setDrSectionHeight}
-        // clientWidth={clientSize?.width}
-      />
+      <DrSection />
       <Slider {...settings}>
-        <CheckList
-          curQuestionNum={1}
+        <ContentByType
+          type='img'
           totalQuestionLength={totalQeustionLength}
-          notice={ENotice.MULTIPLE}
+          curQuestionNum={1}
           title={[ETitle.Q1, ETitle.Q1_2]}
           data={q1()}
-          // innerScrollHeight={innerScrollHeight}
         />
-        <RadioList
+        <ContentByType
           type='slimList'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={2}
           title={[ETitle.Q2, ETitle.Q2_2]}
           data={q2()}
-          // innerScrollHeight={innerScrollHeight}
         />
-        <CheckList
+        <ContentByType
+          targetName={targetName}
           curQuestionNum={3}
           totalQuestionLength={totalQeustionLength}
-          notice={ENotice.MAX_TWO}
+          notice={ENotice.STANDARD_CUP}
           title={[ETitle.Q3, ETitle.Q3_2]}
-          data={q3()}
-          // innerScrollHeight={innerScrollHeight}
+          typeName="type3"
         />
-        <UpDown
+        <ContentByType
           curQuestionNum={4}
           totalQuestionLength={totalQeustionLength}
-          notice={ENotice.STANDARD_CUP}
+          notice={ENotice.MULTIPLE}
           title={[ETitle.Q4, ETitle.Q4_2]}
-          // innerScrollHeight={innerScrollHeight}
+          data={q4()}
+          typeName="type_new type6"
         />
-        <RadioList
-          type='img'
-          totalQuestionLength={totalQeustionLength}
+        <ContentByType
+          targetName={targetName}
           curQuestionNum={5}
+          totalQuestionLength={totalQeustionLength}
+          notice={ENotice.MULTIPLE}
           title={[ETitle.Q5, ETitle.Q5_2]}
           data={q5()}
-          // innerScrollHeight={innerScrollHeight}
+          typeName="type_new type6"
         />
-        <RadioList
-          type='img'
-          totalQuestionLength={totalQeustionLength}
+        <ContentByType
+          targetName={targetName}
           curQuestionNum={6}
+          totalQuestionLength={totalQeustionLength}
+          notice={ENotice.MAX_FIVE}
           title={[ETitle.Q6, ETitle.Q6_2]}
           data={q6()}
-          // innerScrollHeight={innerScrollHeight}
+          typeName="type_new type7"
         />
-        <RadioList
-          type='slimList'
+        <ContentByType
+          targetName={targetName}
+          type='img'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={7}
+          notice={ENotice.GRAIN}
           title={[ETitle.Q7, ETitle.Q7_2]}
           data={q7()}
-          // innerScrollHeight={innerScrollHeight}
         />
-        <RadioList
+        <ContentByType
           type='img'
           totalQuestionLength={totalQeustionLength}
           curQuestionNum={8}
           title={[ETitle.Q8, ETitle.Q8_2]}
           data={q8()}
-          // innerScrollHeight={innerScrollHeight}
         />
-        <CheckList
+        <ContentByType
+          targetName={targetName}
           curQuestionNum={9}
           totalQuestionLength={totalQeustionLength}
-          notice={ENotice.MAX_TWO}
+          notice={ENotice.MAX_FIVE}
           title={[ETitle.Q9, ETitle.Q9_2]}
-          data={q9()}
-          // innerScrollHeight={innerScrollHeight}
+          data={q6()}
+          typeName="type_new type7"
         />
-        <RadioList
-          type='img'
-          totalQuestionLength={totalQeustionLength}
+        <ContentByType
           curQuestionNum={10}
-          title={[ETitle.Q10, ETitle.Q10_2]}
-          notice={ENotice.NOTICE}
-          data={q10()}
-          // innerScrollHeight={innerScrollHeight}
-        />
-        <CheckList
-          curQuestionNum={11}
           totalQuestionLength={totalQeustionLength}
+          min={3}
+          max={15}
+          title={[ETitle.Q10, ETitle.Q10_2]}
+          typeName="type5"
+        />
+        <ContentByType
+          totalQuestionLength={totalQeustionLength}
+          curQuestionNum={11}
           notice={ENotice.MAX_THREE}
           title={[ETitle.Q11, ETitle.Q11_2]}
           data={q11()}
-          // innerScrollHeight={innerScrollHeight}
+          typeName="type1"
         />
-        <Range
-          curQuestionNum={12}
-          totalQuestionLength={totalQeustionLength}
-          min={2}
-          max={15}
-          title={[ETitle.Q12, ETitle.Q12_2]}
-          // innerScrollHeight={innerScrollHeight}
-        />
-        <RadioList
-          type='slimList'
-          totalQuestionLength={totalQeustionLength}
-          curQuestionNum={13}
-          title={[ETitle.Q13, ETitle.Q13_2]}
-          data={q13()}
-          // innerScrollHeight={innerScrollHeight}
-        />
-        <RadioList
-          type='list'
-          totalQuestionLength={totalQeustionLength}
-          curQuestionNum={14}
-          title={[ETitle.Q14, ETitle.Q14_2]}
-          data={q14()}
-          // innerScrollHeight={innerScrollHeight}
-        />
-        <RadioList
-          type='list'
-          totalQuestionLength={totalQeustionLength}
-          curQuestionNum={15}
-          title={[ETitle.Q15, ETitle.Q15_2]}
-          data={q15()}
-          // innerScrollHeight={innerScrollHeight}
-        />
-        <RadioList
-          type='slimList'
-          totalQuestionLength={totalQeustionLength}
-          curQuestionNum={16}
-          title={[ETitle.Q16, ETitle.Q16_2]}
-          data={q16()}
-          // innerScrollHeight={innerScrollHeight}
-        />
-        <RadioList
-          type='slimList'
-          totalQuestionLength={totalQeustionLength}
-          curQuestionNum={17}
-          title={[ETitle.Q17, ETitle.Q17_2]}
-          data={q17()}
-          // innerScrollHeight={innerScrollHeight}
-        />
-        <RadioList
+        <ContentByType
           type='img'
           totalQuestionLength={totalQeustionLength}
-          curQuestionNum={18}
-          title={[ETitle.Q18, ETitle.Q18_2]}
-          data={q18()}
-          // innerScrollHeight={innerScrollHeight}
+          curQuestionNum={12}
+          title={[ETitle.Q12, ETitle.Q12_2]}
+          data={q12()}
+        />
+        <ContentByType
+          targetName={targetName}
+          curQuestionNum={13}
+          totalQuestionLength={totalQeustionLength}
+          title={[ETitle.Q13, ETitle.Q13_2]}
+          data={q13()}
+          typeName="type_new type6"
+        />
+        <ContentByType
+          targetName={targetName}
+          curQuestionNum={14}
+          notice={ENotice.MULTIPLE}
+          totalQuestionLength={totalQeustionLength}
+          title={[ETitle.Q14, ETitle.Q14_2]}
+          data={q14()}
+          typeName="type_new type9"
+        />
+        <ContentByType
+          curQuestionNum={15}
+          notice={ENotice.MAX_THREE}
+          totalQuestionLength={totalQeustionLength}
+          title={[ETitle.Q15, ETitle.Q15_2]}
+          data={q15()}
+          typeName="type_new type8"
         />
       </Slider>
       <style jsx>{ContentStyle}</style>

@@ -82,7 +82,7 @@ $grey: #999 !default;
   }
 
   .tit {
-    min-height: 72px;
+    min-height: 70px;
     margin-top: 4px;
     margin-bottom: 12px;
   }
@@ -96,13 +96,22 @@ $grey: #999 !default;
     color: $primary;
   }
 
+  .ellipsis {
+    display: inline-block;
+    width: 70px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: top;
+  }
+
   .page {
     font-family: 'gilroylight', 'Apple SD Gothic Neo', 'helvetica neue', san-serif;
     font-size: 15px;
     text-align: right;
     color: $grey;
   }
-  
+
   h3 {
     display: block;
     font-size: 20px;
@@ -123,7 +132,7 @@ $grey: #999 !default;
   position: relative;
   width: 26px;
   height: 26px;
-  
+
   .active {
     &:after {
       content: '';
@@ -140,4 +149,43 @@ $grey: #999 !default;
     }
   }
 }
+
+/* 20201018 수정사항적용 공통 */
+.type_new {
+  .list_option {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-item: center;
+    margin-right: -4px;
+    margin-left: -4px;
+
+    li {
+      width: 50%;
+      padding: 0 4px;
+
+      &:nth-of-type(2) {
+        margin-top: 0;
+      }
+    }
+
+    .inp_check,
+    .inp_radio {
+      & + label {
+        align-item: center;
+
+        span {
+          font-size: 14px;
+        }
+      }
+
+      &:checked + label {
+        background: #e3eaf5;
+        background-image: none;
+      }
+
+    }
+  }
+}
+
 `;
